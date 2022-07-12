@@ -35,26 +35,27 @@
 
     <!--css-->
     <link href="./assets/styles/style_mobile.css" rel="stylesheet" />
+    <link href="./assets/styles/style_desktop.css" rel="stylesheet" />
     <!-- <link href="./assets/styles/normalize.css" rel="stylesheet" /> -->
 
     <title>Portfolio-MC</title>
   </head>
   <body>
     <header class="header">
+      <div class="light" data-text="MC developer">MC developer</div>
       <nav class="menu">
-        <div class="light" data-text="MC developer">MC developer</div>
         <ul class="menu__items-container">
           <li class="menu__item">
             <a href="#" class="menu__item-link">Inicio</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__item-link">Sobre mi</a>
+            <a href="#sobremi" class="menu__item-link">Sobre mi</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__item-link">Portfolio</a>
+            <a href="#proyectos" class="menu__item-link">Portfolio</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__item-link">Contacto</a>
+            <a href="#contacto" class="menu__item-link">Contacto</a>
           </li>
         </ul>
       </nav>
@@ -69,20 +70,24 @@
       <section class="inicio">
         <article class="social">
           <div class="social__icons">
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/hernan-exequiel-maydana-913a50218/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/exe_m666/" target="_blank"><i class="fa-brands fa-instagram-square"></i></a>
+            <a href="https://github.com/ExequielMaydana?tab=repositories" target="_blank"><i class="fa-brands fa-github"></i></a>
           </div>
-          <div class="social__division"></div>
         </article>
+        <div class="social__division"></div>
         <article class="inicio__nombre">
-          <h1>Exequiel<br />Maydana</h1>
-          <p>Frontend Developer</p>
-          <span></span>
+          <div class="inicio__nombre-text">
+            <h1>Exequiel Maydana</h1>
+            <p>Frontend Developer</p>
+          </div>
+          <div class="inicio__container-img">
+            <img class="inicio__img" src="./assets/images/images-home/logo-home-orgulloso.svg" alt="logo-home"/>
+          </div>
         </article>
       </section>
 
-      <section class="sobre__mi">
+      <section class="sobre__mi" id="sobremi">
         <div class="sobre__mi-title">
           <h2>Sobre mi</h2>
           <span></span>
@@ -94,16 +99,16 @@
             parado de aprender, mi objetivo es llegar a ser un buen
             desarrollador web full-stack, luego me gustaria aprender seguridad
             informatica ya que esto es algo que siempre me atrajo desde que
-            inicie en el mundo de la programacion. A lo largo de mi carrera como
+            inicie en el mundo de la programacion. A lo largo de mi formacion como
             desarrollador he enfatizado la importancia del código escalable y
             bien documentado, me gusta trabajar en colaboración, pero también
             puedo llevar a cabo proyectos por mi cuenta.
           </p>
         </article>
         <div class="sobre__mi-button">
-          <button class="button">
-            <span class="button-content">Descargar cv</span>
-          </button>
+          <div class="button">
+            <a download="cv" href="./assets/cv.pdf" class="button-content">Descargar cv</a>
+          </div>
         </div>
       </section>
 
@@ -182,7 +187,7 @@
         </article>
       </section>
 
-      <section class="proyectos">
+      <section class="proyectos" id="proyectos">
         <div class="proyectos__title">
           <h2>Portfolio</h2>
           <span></span>
@@ -204,8 +209,8 @@
                 Pueden pasar a ver con gusto el codigo en mi github
               </p>
               <div class="card__data-buttons">
-                <a href="#" class="card__btn">Ver</a>
-                <a href="#" class="card__btn">Coding</a>
+                <a href="https://weather-app-maydanacode.netlify.app/" target="_blank" class="card__btn">Ver</a>
+                <a href="https://github.com/ExequielMaydana/weather-app-react" target="_blank" class="card__btn">Coding</a>
               </div>
             </div>
           </div>
@@ -247,15 +252,15 @@
                 codigo, que la disfruten!
               </p>
               <div class="card__data-buttons">
-                <a href="#" class="card__btn">Ver</a>
-                <a href="#" class="card__btn">Coding</a>
+                <a href="https://ricky-and-morty-maydana-code.netlify.app/" target="_blank" class="card__btn">Ver</a>
+                <a href="https://github.com/ExequielMaydana/ricky-and-morty-App-React" target="_blank" class="card__btn">Coding</a>
               </div>
             </div>
           </div>
         </article>
       </section>
 
-      <section class="container__contacto">
+      <section class="container__contacto" id="contacto">
         <!-- <div class="contacto__title">
             <h2>Creemos algo juntos!</h2>
             <span></span>
@@ -277,6 +282,7 @@
                 <textarea></textarea>
                 <label class="label" for="">Su mensaje.</label>
             </div>
+            <button class="form__btn">Submit</button>
         </form>
       </section>
     </main>

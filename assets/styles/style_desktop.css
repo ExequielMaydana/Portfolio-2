@@ -1,0 +1,349 @@
+@media (min-width: 769px) {
+
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .header {
+        height: 80px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #212121;
+        z-index: 1;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu {
+        margin-right: 50px;
+    }
+
+    .menu__item {
+        padding: 10px 0 0 0;
+        margin: 0 20px;
+        width: max-content;
+    }
+
+    /* container ul */
+    .menu__items-container {
+        display: contents;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        gap: 30px;
+    }
+
+    /* menu-hamburguesa */
+    .bars__menu {
+        display: none;
+    }
+
+    /* Logo */
+    .light {
+        font-size: 2rem;
+    }
+
+    .inicio {
+        padding: 80px 0 0 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .social{
+        align-items: center;
+    }
+
+    .social__icons {
+        width: 30%;
+        margin: 30px 0 0 0 ;
+        gap: 10px;
+    }
+
+    .social__icons a {
+        width: 60px;
+        font-size: 2.3rem;
+    }
+
+    .social__icons a:hover {
+        background-color: #D5D8DC;
+        color: #000;
+        transition: 1s;
+    }
+
+    .social__division {
+        border: 2px solid #000;
+        height: 300px;
+        margin: 45px 5px 0 10px;
+    }
+
+    .inicio__nombre {
+        width: 70%;
+        margin: 20px 0 0 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .inicio__nombre-text {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .inicio__nombre-text h1 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    .inicio__nombre-text p {
+        font-size: 1.5rem;
+    }
+
+    .inicio__img {
+        padding: 10px 0 0 30px;
+        width: 80%;
+        object-fit: contain;
+    }
+
+    /* apartado sobre mi */
+    .sobre__mi {
+        padding: 80px 0 0 0;
+    }
+
+    .sobre__mi-title h2 {
+        font-size: 2.3rem;
+    }
+
+    .sobre__mi-text {
+        width: 70%;
+    }
+
+    .sobre__mi-text p {
+        font-size: 1.3rem;
+    }
+
+    .button {
+        height: 3rem;
+        padding: 0 3rem;
+        font-size: 1.3rem;
+    }
+
+    .habilidades__title h2 {
+        font-size: 2.3rem;
+    }
+
+    .habilidades__items {
+        width: 250px;
+    }
+
+    .habilidades__items:hover{
+        margin: 5px;
+    }
+
+    .habilidades__items i {
+        font-size: 4rem;
+    }
+
+    .habilidades__items p {
+        font-size: 1.3rem;
+    }
+
+
+    .formacion__academica-title h2 {
+        font-size: 2.3rem;
+        margin: 0;
+    }
+
+    .formacion__academica-title span {
+        max-width: 35%;
+    }
+
+    .formacion__academica-card {
+        margin: 3px 0;
+        width: 60%;
+    }
+
+    .formacion__academica-card:hover {
+        transform: scale(1.1);
+        margin: 10px 0 ;
+    }
+
+    .academia-card__text {
+        padding: 5px;
+        color: #dddddd;
+        font-size: 1rem;
+    }
+
+    .academia-card__text span {
+        color: rgb(0, 238, 255);
+    }
+
+    /* proyectos */
+    .proyectos__title h2 {
+        font-size: 2.3rem;
+    }
+
+    .proyectos__card {
+        position: relative;
+        width: min(100%, 400px);
+        height: 400px;
+        background-color: #212121;
+        color: #AEB6BF;
+        text-align: center;
+        border: 2px solid rgb(99, 199, 206);
+        overflow: hidden;
+        box-shadow: 0 3px 5px #212121;
+    }
+
+    .card__data {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-400px);
+        transition: transform .5s;
+    }
+
+    .card__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .25s .35s;
+    }
+
+    .card__title {
+        font-size: 1.5rem;
+    }
+
+    .card__description {
+        font-size: 1rem;
+    }
+
+    .card__btn {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .proyectos__card:hover .card__img {
+        transform: translateX(400px);
+    }
+
+    .container__contacto {
+        padding: 80px 0 0 0;
+    }
+
+    .contacto__title h2 {
+        margin: 10px 0 0 0;
+        font-size: 2.3rem;
+    }
+
+    .form {
+        width: 70%;
+        height: 400px;
+    }
+
+    .form__item {
+        position: relative;
+        display: flex;
+        height: 3rem;
+        bottom: 30px;
+        width: 90%;
+    }
+
+    .label {
+        position: absolute;
+        top: 50%;
+        left: 0.65rem;
+        transform: translateY(-50%);
+        color: #888;
+        pad: 0.25rem 0.5rem;
+        pointer-events: none;
+        transition: all 0.35s;
+    }
+
+    .form__item input {
+        height: inherit;
+        width: 100%;
+        border: 2px solid #888;
+        border-radius: 0.5rem;
+        outline: none;
+        background: transparent;
+        color: #f7f7f7;
+        font-size: 1rem;
+        text-indent: 1rem;
+        transition: all 0.35s;
+    }
+
+    .form__item textarea {
+        width: 100%;
+        height: 100px;
+        resize: none;
+        border-radius: 5px;
+        outline: none;
+        background: transparent;
+        text-indent: 1rem;
+        border-radius: 0.5rem;
+        border: 2px solid #888;
+    }
+
+    .form__btn{
+        margin: 30px 0 10px 0;
+        width: 50%;
+        padding: 5px 0 ;
+        font-size: 1rem;
+        border-radius: 5px;
+        background-color: #3d384e;
+        color: #D5D8DC;
+        border: none;
+        box-shadow: 0 0 4px #c7cace;
+        cursor: pointer;
+    }
+
+    .form__item input:focus {
+        border-color: rgb(0, 238, 255);
+    }
+
+    .form__item textarea:focus {
+        border-color: rgb(0, 238, 255);
+    }
+
+    .form__item input:focus~.label {
+        background: #16141b;
+        color: rgb(0, 238, 255);
+        transform: translateY(-2.875rem);
+    }
+
+    .form__item textarea:focus~.label {
+        background: #16141b;
+        color: rgb(0, 238, 255);
+        transform: translateY(-2.875rem);
+
+    }
+
+    .footer {
+        height: 100px;
+    }
+
+    .footer__content h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer__icon a {
+        padding: 10px 20px;
+        font-size: 2rem;
+    }
+
+
+}

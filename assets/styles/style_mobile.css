@@ -1,21 +1,26 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body{
+    margin: 0;
+    padding: 0;
     background: #D6DBDF;
     font-family: 'Roboto Mono', monospace;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 .header {
     height: 60px;
     width: 100%;
-    /* position: sticky; */
+    position: fixed;
     top: 0;
     left: 0;
     background-color: #212121;
+    z-index: 1;
 }
 
 .menu {
@@ -32,11 +37,11 @@ body{
     list-style: none;
     background-color: #212121;
     position: fixed;
-    top: 60px;
+    top: 44px;
     width: 100%;
     padding: 20px 0;
 
-    height: 50%;
+    height: 100%;
     /* este left es para que se oculte hacia la derecha hasta apretar el boton */
     left: 100%;
     transition: 1s;
@@ -47,8 +52,6 @@ body{
     margin: 0 10px;
     line-height: 70px;
     text-transform: uppercase;
-    /* width: max-content; */
-
 }
 
 .menu__item-link {
@@ -164,7 +167,7 @@ main{
 }
 
 .social__icons{
-    max-width: 100%;
+    width: 100%;
     margin: 45px 0 0 5px;
     display: flex;
     flex-direction: column;
@@ -195,33 +198,46 @@ main{
     border: 1px solid #000;
     background-color: #000;
     border-radius: 5px;
-    height: 150px;
-    margin: 45px 5px 0 10px;
+    height: 200px;
+    margin: 25px 5px 0 10px;
     box-shadow: 0 2px 5px rgb(0,238,255);
 }
 
 .inicio__nombre{
-    max-width: 100%;
-    margin: 20px 0 0 10px;
+    width: 100%;
+    margin: 40px 0 0 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
     flex-wrap: wrap;
 }
 
-.inicio__nombre h1 {
+.inicio__nombre-text{
+    max-width: 100%;
+}
+
+.inicio__nombre-text h1 {
+    width: 100%;
     font-size: 1.5rem;
     margin: 0;
 }
 
-.inicio__nombre p{
+.inicio__nombre-text p{
     font-size: 1.1rem;
     margin: 10px 0 0 0;
     color: rgb(0,189,255);
     text-shadow: 1px 3px 2px #000;
 }
 
+.inicio__container-img{
+    width: 70%;
+}
+
+.inicio__img{
+    width: 100%;
+    object-fit: contain;
+}
+
+/* apartado sobre mi */
 .sobre__mi{
     width: 100%;
     padding: 60px 0 0 0;
@@ -272,6 +288,10 @@ main{
     background-size: 400%;
     color: #ffffff;
     cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button:hover::before{
@@ -280,10 +300,12 @@ main{
 
 .button-content{
     position: relative;
+    color: #D6DBDF;
+    text-decoration: none;
 }
 
 .button::before{
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -292,7 +314,7 @@ main{
     width: 100%;
     height: inherit;
     border-radius: inherit;
-    background-color: rgb(0,238,255);
+    background-color: rgba(0,238,255);
     transition: all 0.475s;
 }
 
@@ -363,10 +385,11 @@ main{
 }
 
 .formacion__academica-title{
-    max-width: 100%;
+    width: 100%;
     margin: 0 0 15px 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .formacion__academica-title h2{
@@ -377,7 +400,7 @@ main{
 .formacion__academica-title span {
     border: 1px solid #212121;
     box-shadow: 0 0 4px rgb(0,238,255);
-    max-width: 250px;
+    width: 60%;
 }
 
 .formacion__academica-card{
@@ -423,6 +446,7 @@ main{
 
 .proyectos__title h2{
     font-size: 1.5rem;
+    margin: 0;
 }
 
 .proyectos__title span{
@@ -436,11 +460,12 @@ main{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    padding: 5px;
 }
 
 .proyectos__card{
     position: relative;
-    width: 270px;
+    width: min(100%, 300px);
     height: 270px;
     background-color: #212121;
     color: #AEB6BF;
@@ -491,6 +516,7 @@ main{
     background-color: #D6DBDF;
     transition: background-color .25s;
     font-size: 0.8rem;
+    border-radius: 5px;
 }
 
 .card__btn:hover{
@@ -503,7 +529,7 @@ main{
 }
 
 .proyectos__card:hover .card__img{
-    transform: translateX(270px);
+    transform: translateX(300px);
     transition-delay: 0s;
 }
 
@@ -526,6 +552,7 @@ main{
 .contacto__title h2{
     font-size: 1rem;
     color: rgb(0,238,255);
+    margin: 0;
 }
 
 .contacto__title span {
@@ -536,7 +563,7 @@ main{
  .form{
     position: relative;
     width: 90%;
-    height: 350px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -590,6 +617,25 @@ main{
     text-indent: 1rem;
     border-radius: 0.5rem;
     border: 2px solid #888;
+    color: #f7f7f7;
+}
+
+.form__btn{
+    margin: 50px 0 10px 0;
+    width: 50%;
+    padding: 5px 0 ;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #3d384e;
+    color: #D5D8DC;
+    border: none;
+    box-shadow: 0 0 4px #c7cace;
+    cursor: pointer;
+}
+
+.form__btn:hover{
+    background-color: #c7cace;
+    color: #3d384e;
 }
 
 .form__item input:focus{border-color: rgb(0,238,255);}
@@ -638,3 +684,194 @@ main{
     transition: 0.3s;
 }
 
+@media (min-width: 481px){
+
+    .header {
+        height: 80px;
+    }
+    
+    /* container ul */
+    .menu__items-container {
+        top: 64px;
+    }
+    
+    .menu__item {
+        font-size: 1.3rem;
+    }
+
+    /* menu-hamburguesa */
+    .bars__menu {
+        top: 35px;
+    }
+    
+    /* Logo */
+    .light{
+        line-height: 80px;
+    }
+    
+    .inicio{
+        padding: 80px 0 0 0;
+    }
+    
+    .social__icons{
+        width: 30%;
+        margin: 45px 0 0 20px;
+    }
+    
+    .social__icons a {
+        width: 50px;
+        aspect-ratio: 1;
+        font-size: 2rem;
+    }
+    
+    .social__division{
+        border: 1.5px solid #000;
+        height: 250px;
+        margin: 20px 5px 0 10px;
+    }
+    
+    .inicio__nombre{
+        margin: 40px 0 0 30px;
+    }
+    
+    .inicio__nombre-text h1 {
+        font-size: 2rem;
+    }
+    
+    .inicio__nombre-text p{
+        font-size: 1.5rem;
+    }
+    
+    .inicio__container-img{
+        width: 50%;
+    }
+    
+    .inicio__img{
+        width: 90%;
+        object-fit: contain;
+    }
+    
+    /* apartado sobre mi */
+    .sobre__mi{
+        padding: 80px 0 0 0;
+    }
+    
+    .sobre__mi-title h2 {
+        font-size: 2rem;
+    }
+
+    
+    .sobre__mi-text{
+        width: 90%;
+    }
+    
+    .sobre__mi-text p {
+        font-size: 1rem;
+    }
+    
+    
+    .button{
+        height: 3rem;
+        padding: 0 3rem;
+    }
+    
+
+    /* habilidades */
+    
+    .habilidades__title h2 {
+        font-size: 2rem;
+    }
+    
+    .habilidades__items{
+        width: 150px;
+    }
+    
+    .habilidades__items i {
+        font-size: 3rem;
+    }
+    
+
+    /* formacion academica */
+
+    .formacion__academica-title h2{
+        font-size: 2rem;
+
+    }
+    
+    .formacion__academica-title span {
+        width: 60%;
+    }
+
+    
+    .academia-card__text{
+        font-size: 0.8rem;
+    }
+    
+    /* proyectos */
+    
+    .proyectos{
+        width: 100%;
+        padding: 70px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .proyectos__title{
+        margin: 0 0 20px 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .proyectos__title h2{
+        font-size: 2rem;
+    }
+    
+    .proyectos__title span{
+        border: 1px solid #212121;
+        box-shadow: 0 0 4px rgb(0,238,255);
+    }
+    
+    .card__title{
+        font-size: 0.9rem;
+    }
+
+
+
+    
+    .contacto__title h2{
+        font-size: 2rem;
+        margin: 0;
+    }
+    
+    .form__item{
+        max-width: 90%;
+    }
+    
+    .form__btn{
+        margin: 50px 0 10px 0;
+        width: 50%;
+        padding: 5px 0 ;
+        font-size: 1rem;
+        border-radius: 5px;
+        background-color: #3d384e;
+        color: #D5D8DC;
+        border: none;
+        box-shadow: 0 0 4px #c7cace;
+        cursor: pointer;
+    }
+    
+    .footer{
+        height: 80px;
+    }
+    
+    .footer__content h2{
+        font-size: 1.5rem;
+    }
+    
+    .footer__icon a{
+        padding: 9px 15px;
+        font-size: 1.3rem;
+    }
+    
+}
