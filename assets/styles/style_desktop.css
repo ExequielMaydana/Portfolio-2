@@ -20,7 +20,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1442px;
     }
 
     .menu {
@@ -50,7 +49,7 @@
     /* Logo */
     .light {
         font-size: 2rem;
-        margin-left: 100px;
+        margin-left: 50px;
     }
 
     .inicio {
@@ -108,8 +107,9 @@
         margin: 0;
     }
 
-    .inicio__nombre-text p {
+    .inicio__nombre-text .text-maquina{
         font-size: 1.5rem;
+        margin: 0;
     }
 
     .inicio__img {
