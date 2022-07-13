@@ -61,7 +61,7 @@ html{
 
 .menu__item-link:hover{
     color: aqua;
-    transition: 1s;
+    transition: 0.6s;
 }
 
 /* clase para que funcione el menu hamburguesa */
@@ -190,7 +190,7 @@ main{
 .social__icons a:hover{
     background-color: #D5D8DC;
     color: #000;
-    transition: 1s;
+    transition: 0.4s;
 }
 
 .social__division{
@@ -315,7 +315,7 @@ main{
     height: inherit;
     border-radius: inherit;
     background-color: rgba(0,238,255);
-    transition: all 0.475s;
+    transition: 0.6s;
 }
 
 .habilidades{
@@ -361,7 +361,7 @@ main{
 
 .habilidades__items:hover{
     transform: scale(1.1);
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .habilidades__items i {
@@ -416,6 +416,7 @@ main{
 
 .formacion__academica-card:hover{
     transform: scale(1.1);
+    transition: 0.6s;
 }
 
 .academia-card__text{
@@ -482,14 +483,14 @@ main{
     width: 100%;
     height: 100%;
     transform: translateY(-500px);
-    transition: transform .5s;
+    transition: transform 1s;
 }
 
 .card__img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform .25s .35s;
+    transition: transform 1s;
 }
 
 .card__title{
@@ -522,15 +523,18 @@ main{
 .card__btn:hover{
     background-color: #212121;
     color: rgb(0,238,255);
+    transition: 0.4s;
 }
 
 .proyectos__card:hover .card__data{
     transform: translateY(0px);
+    transition: 0.6s;
 }
 
 .proyectos__card:hover .card__img{
     transform: translateX(300px);
     transition-delay: 0s;
+    transition: 0.6s;
 }
 
 .container__contacto{
@@ -591,7 +595,7 @@ main{
     color: #888;
     pad: 0.25rem 0.5rem;
     pointer-events: none;
-    transition: all 0.35s;
+    transition: 0.4s;
 }
 
 .form__item input{
@@ -604,7 +608,7 @@ main{
     color: #f7f7f7;
     font-size: 1rem;
     text-indent: 1rem;
-    transition: all 0.35s;
+    transition: 0.4s;
 }
 
 .form__item textarea{
@@ -636,6 +640,7 @@ main{
 .form__btn:hover{
     background-color: #c7cace;
     color: #3d384e;
+    transition: 0.4s;
 }
 
 .form__item input:focus{border-color: rgb(0,238,255);}
@@ -645,13 +650,14 @@ main{
     background: #16141b;
     color: rgb(0,238,255);
     transform: translateY(-2.875rem);
+    transition: 0.4s;
 }
 
 .form__item textarea:focus ~ .label {
     background: #16141b;
     color: rgb(0,238,255);
     transform: translateY(-2.875rem);
-
+    transition: 0.4s;
 }
 
 .footer{
@@ -681,7 +687,7 @@ main{
 .footer__icon a:hover{
     background-color: #3d384e;
     color: rgb(0,238,255);
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 @media (min-width: 481px){
